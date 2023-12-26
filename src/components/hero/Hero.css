@@ -21,16 +21,22 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
+   width: 200%;
+}
+
+.hero .col-1 .hero-text-box {
+   line-height: 90px;
 }
 
 .hero .col-1 h1 {
-   font-size: 82px;
+   font-size: 72px;
    font-weight: 300;
    color: var(--darkgrey);
 }
 
 .hero .col-1 .primary-color {
    font-weight: 700;
+   font-size: 82px;
 }
 
 .hero .col-1 p {
@@ -82,6 +88,9 @@
    border-radius: 4px;
 }
 
+.col-2 .heroImg {
+   /* background-color: red; */
+}
 .col-2 .divider p {
    width: 100%;
    text-align: center;
@@ -119,7 +128,7 @@ form input {
    font-weight: 500;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1100px) {
    .hero {
       height: auto;
       width: 100%;
@@ -133,6 +142,16 @@ form input {
       grid-template-columns: 1fr;
    }
 
+   .hero .col-1 h1 {
+      font-size: 72px;
+      font-weight: 300;
+      color: var(--darkgrey);
+   }
+
+   .hero .col-1 .primary-color {
+      font-weight: 700;
+   }
+
    .hero .col-1 {
       height: 90vh;
       padding: 0.2rem;
@@ -141,6 +160,42 @@ form input {
 
    .hero h1 {
       font-size: 32px;
+   }
+
+   .hero .col-2 {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 718px) {
+   .hero {
+      height: auto;
+      width: 100%;
+   }
+
+   .hero .container {
+      padding: 0 1rem;
+   }
+
+   .hero .content {
+      grid-template-columns: 1fr;
+   }
+
+   .hero .col-1 h1 {
+      font-size: 52px;
+      font-weight: 300;
+      color: var(--darkgrey);
+   }
+
+   .hero .col-1 .primary-color {
+      font-weight: 700;
+   }
+
+   .hero .col-1 {
+      height: 650px;
+      padding: 0.2rem;
+      max-width: 100%;
+      margin-top: -30px;
    }
 
    .hero .col-2 {

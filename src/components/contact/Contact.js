@@ -1,52 +1,97 @@
-import React from 'react'
-import { FaEnvelope, FaPhone } from 'react-icons/fa'
-import './Contact.css'
+import React, { useEffect } from "react";
+import {
+   FaEnvelope,
+   FaFacebook,
+   FaInstagram,
+   FaTwitter,
+} from "react-icons/fa";
+import "./Contact.css";
 
 export const Contact = () => {
-    return (
-        <div className='contact'>
-            <div className='container'>
-                <div className='col-1'>
-                    <div className='content'>
-                        <div><h2>Get in touch</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam,
-                            iusto natus fugit saepe minima rem nemo laborum ea dolorum
-                                est.</p>
-                        </div>
-                        <div className='address'>
-                            <p>742 Evergreen Terrace</p>
-                            <p>Springfield, OR 12345</p>
-                        </div>
-                        <div className='icons'>
-                            <FaPhone style={{marginRight: '1rem'}} />
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                        <div className='icons'>
-                            <FaEnvelope style={{marginRight: '1rem'}} />
-                            <p>support@example.com</p>
-                        </div>
-                        <div className='careers'>
-                            <p>Looking for careers? <span>View all jop openings.</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div className='col-2'>
-                    <form action=''>
-                        <input type='text' placeholder='Full name' />
-                        <input type='email' placeholder='Email' />
-                        <input type='phone' placeholder='Phone' />
-                        <textarea name='Message' placeholder='Message' cols='30' rows='10'></textarea>
-                        <div className='checkbox'>
-                            <input type='checkbox' />
-                            <p>By checking this box, you agree to the <span>Privacy Policy</span> and
-                             <span>Cookie Policy</span>.</p>
-                        </div>
-                        <button className='button'>Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    )
-}
+   const pathname = window.location.pathname;
 
-export default Contact
+   useEffect(() => {
+      window.scrollTo(0, 0);
+   }, [pathname]);
+
+   const formSubmit = (e) => {
+      e.preventDefault();
+   };
+   return (
+      <div className="contact">
+         <div className="container">
+            <div className="col-1">
+               <div className="content">
+                  <div>
+                     <h2>Stay in the Loop</h2>
+                     <p>
+                        Join our vibrant community and never miss out
+                        on updates, winner announcements, and special
+                        events.
+                     </p>
+                     <div className="icons">
+                        <FaEnvelope style={{ marginRight: "1rem" }} />
+                        <p>info@kera.live</p>
+                     </div>
+
+                     <p className="followTitle">
+                        Follow Us on Social Media
+                     </p>
+
+                     <div>
+                        <FaFacebook
+                           size={25}
+                           style={{
+                              color: "#6948FF",
+                              marginRight: "20px",
+                              cursor: "pointer",
+                           }}
+                        />
+                        <FaInstagram
+                           size={25}
+                           style={{
+                              color: "#6948FF",
+                              marginRight: "20px",
+                              cursor: "pointer",
+                           }}
+                        />
+                        <FaTwitter
+                           size={25}
+                           style={{
+                              color: "#6948FF",
+                              marginRight: "20px",
+                              cursor: "pointer",
+                           }}
+                        />
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div className="col-2">
+               <h2>We're Here to Help</h2>
+               <p>
+                  Questions or feedback? Our dedicated support team is
+                  just a message away.
+               </p>
+               <form action="">
+                  <input type="text" placeholder="Full name" />
+                  <input type="email" placeholder="Email" />
+                  <input type="phone" placeholder="Phone" />
+                  <textarea
+                     name="Message"
+                     placeholder="Message"
+                     cols="30"
+                     rows="10"
+                  ></textarea>
+
+                  <button onClick={formSubmit} className="button">
+                     Submit
+                  </button>
+               </form>
+            </div>
+         </div>
+      </div>
+   );
+};
+
+export default Contact;

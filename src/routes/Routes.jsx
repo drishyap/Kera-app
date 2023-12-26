@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+import Contact from "../components/contact/Contact";
+import Faq from "../components/faq/Faq";
 import Home from "../components/Home";
 import PageNotFound from "../components/pageNotFound";
 import Pricing from "../components/pricing/Pricing";
@@ -11,12 +13,16 @@ const RouteList = () => {
             component: <Home />,
          },
          {
-            path: "/pricing",
+            path: "/about",
             component: <Pricing />,
          },
          {
-            path: "/pricing",
-            component: <Pricing />,
+            path: "/features",
+            component: <Faq />,
+         },
+         {
+            path: "/contact",
+            component: <Contact />,
          },
       ],
    };

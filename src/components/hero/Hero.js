@@ -8,16 +8,18 @@ const Hero = () => {
          <div className="container">
             <div className="content">
                <div className="col-1">
-                  <h1>Welcome to</h1>
-                  <h1>
-                     <span className="primary-color">Kera</span>
-                  </h1>
+                  <div className="hero-text-box">
+                     <h1>Welcome to</h1>
+                     <h1>
+                        <span className="primary-color">Kera</span>
+                     </h1>
+                  </div>
                   <p>
                      Unleash the Power of Your Choices and Win Big!
                   </p>
                </div>
                <div className="col-2">
-                  <div style={{ backgroundColor: "red" }}>
+                  <div className="heroImg">
                      <img src={heroImg} alt="win big" />
                   </div>
                </div>
